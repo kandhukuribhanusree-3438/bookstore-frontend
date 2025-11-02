@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <h1>📚 LearnSmart Bookstore</h1>
+      </div>
+      <nav class="nav">
+        <a (click)="navigateToSection('')" class="nav-link">Home</a>
+        <a (click)="navigateToSection('about')" class="nav-link">About</a>
+        <a (click)="scrollToOrder()" class="nav-link">Order</a>
+      </nav>
+    </div>
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Search books by title or category..."
+        [(ngModel)]="searchTerm"
+        (input)="onSearch()"
+        class="search-input"
+      />
+    </div>
+  </div>
+</header>
+

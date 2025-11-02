@@ -1,0 +1,72 @@
+.order-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.order-form {
+  padding: 2.5rem;
+}
+
+.total-price {
+  font-size: 1.3rem;
+  color: #1976d2;
+  text-align: center;
+  padding: 1.5rem;
+  background: #e3f2fd;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+}
+
+.success-message {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.success-message h3 {
+  color: #4caf50;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.success-message p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.error-message {
+  color: #f44336;
+  background: #ffebee;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.order-form .btn {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 14px;
+  margin-top: 1rem;
+}
+
+.order-form .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .order-form {
+    padding: 1.5rem;
+  }
+
+  .total-price {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+}
+

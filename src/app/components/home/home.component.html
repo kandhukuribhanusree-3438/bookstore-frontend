@@ -1,0 +1,39 @@
+<div class="section" id="home-section">
+  <div class="container">
+    <h2 class="section-title">Browse Our Collection</h2>
+    
+    <div class="filters">
+      <div class="category-filters">
+        <button
+          *ngFor="let category of categories"
+          [class.active]="selectedCategory === category"
+          (click)="filterByCategory(category)"
+          class="category-btn"
+        >
+          {{ category }}
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="filteredBooks.length === 0" class="no-books">
+      <p>No books found. Try a different search or category.</p>
+    </div>
+
+    <div class="books-grid" *ngIf="filteredBooks.length > 0">
+      <div *ngFor="let book of filteredBooks" class="book-card card">
+        <div class="book-image">
+          <img [src]="book.imageUrl" [alt]="book.title" />
+        </div>
+        <div class="book-info">
+          <h3 class="book-title">{{ book.title }}</h3>
+          <p class="book-category">{{ book.category }}</p>
+          <p class="book-price">${{ book.price.toFixed(2) }}</p>
+          <button class="btn btn-primary" (click)="scrollToOrder(book)">
+            Order
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
